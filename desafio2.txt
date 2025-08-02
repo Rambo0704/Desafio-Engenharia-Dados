@@ -4,11 +4,9 @@
 
 Armazenar as respostas é essencial por vários motivos estratégicos:
 
-- **Histórico de dados:** possibilita análises retroativas, mesmo se a API não fornecer dados passados.
-- **Rastreabilidade e auditoria:** permite validar relatórios e identificar inconsistências.
-- **Desacoplamento da API:** evita falhas caso a API esteja fora do ar ou instável.
-- **Qualidade de dados:** possibilita validar formatos, aplicar consistência e reprocessar logicamente.
-- **Performance:** reduz dependência de sistemas transacionais e melhora tempo de resposta em consultas analíticas.
+- Histórico de dados: possibilita análises retroativas, mesmo se a API não fornecer dados passados.
+- Rastreabilidade e auditoria permite validar relatórios e identificar inconsistências.
+-Desacoplamento da APIevita falhas caso a API esteja fora do ar ou instável.
 
 
 2.
