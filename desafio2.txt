@@ -1,0 +1,48 @@
+
+
+1.
+
+Armazenar as respostas é essencial por vários motivos estratégicos:
+
+- **Histórico de dados:** possibilita análises retroativas, mesmo se a API não fornecer dados passados.
+- **Rastreabilidade e auditoria:** permite validar relatórios e identificar inconsistências.
+- **Desacoplamento da API:** evita falhas caso a API esteja fora do ar ou instável.
+- **Qualidade de dados:** possibilita validar formatos, aplicar consistência e reprocessar logicamente.
+- **Performance:** reduz dependência de sistemas transacionais e melhora tempo de resposta em consultas analíticas.
+
+
+2.
+
+Os dados são armazenados por endpoint, particionados por `ano`, `mês`, `dia` e `storeId`, o que permite:
+
+- Busca eficiente por período e loja
+- Facilidade de carregamento incremental
+- Compatibilidade com ferramentas como Spark, Hive, Trino, Presto, etc.
+
+Exemplo de estrutura:
+
+/data-lake/
+├── bi/
+│ └── getFiscalInvoice/
+│ └── year=2025/month=08/day=02/storeId=001/
+│ └── data.json
+│
+├── res/
+│ └── getGuestChecks/
+│ └── year=2025/month=08/day=02/storeId=001/
+│ └── data.json
+│
+├── org/
+│ └── getChargeBack/
+│ └── year=2025/month=08/day=02/storeId=001/
+│ └── data.json
+│
+├── trans/
+│ └── getTransactions/
+│ └── year=2025/month=08/day=02/storeId=001/
+│ └── data.json
+│
+├── inv/
+│ └── getCashManagementDetails/
+│ └── year=2025/month=08/day=02/storeId=001/
+│ └── data.json

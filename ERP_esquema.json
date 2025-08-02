@@ -1,0 +1,79 @@
+{
+  "curUTC": "string (data-hora UTC)",
+  "locRef": "string (referência local)",
+  "guestChecks": [
+    {
+      "guestCheckId": "number (ID do pedido)",
+      "chkNum": "number (número da comanda)",
+      "opnBusDt": "string (data de abertura do pedido)",
+      "opnUTC": "string (data-hora UTC de abertura)",
+      "opnLcl": "string (data-hora local de abertura)",
+      "clsdBusDt": "string (data de fechamento)",
+      "clsdUTC": "string (data-hora UTC de fechamento)",
+      "clsdLcl": "string (data-hora local de fechamento)",
+      "lastTransUTC": "string (última transação UTC)",
+      "lastTransLcl": "string (última transação local)",
+      "lastUpdatedUTC": "string (última atualização UTC)",
+      "lastUpdatedLcl": "string (última atualização local)",
+      "clsdFlag": "boolean (pedido fechado?)",
+      "gstCnt": "number (quantidade de convidados)",
+      "subTtl": "number (subtotal)",
+      "nonTxblSlsTtl": "number/null (vendas não tributáveis)",
+      "chkTtl": "number (total da comanda)",
+      "dscTtl": "number (descontos aplicados)",
+      "payTtl": "number (total pago)",
+      "balDueTtl": "number/null (saldo devedor)",
+      "rvcNum": "number (número do ponto de venda)",
+      "otNum": "number (ordem de trabalho)",
+      "ocNum": "number/null",
+      "tblNum": "number (número da mesa)",
+      "tblName": "string (nome da mesa)",
+      "empNum": "number (funcionário responsável)",
+      "numSrvcRd": "number (número de rodadas de serviço)",
+      "numChkPrntd": "number (quantas vezes a comanda foi impressa)",
+
+      "taxes": [
+        {
+          "taxNum": "number (código do imposto)",
+          "txblSlsTtl": "number (valor tributável)",
+          "taxCollTtl": "number (valor de imposto coletado)",
+          "taxRate": "number (porcentagem do imposto)",
+          "type": "number (tipo do imposto)"
+        }
+      ],
+
+      "detailLines": [
+        {
+          "guestCheckLineItemId": "number (ID do item da comanda)",
+          "rvcNum": "number",
+          "dtlOtNum": "number",
+          "dtlOcNum": "number/null",
+          "lineNum": "number",
+          "dtlId": "number",
+          "detailUTC": "string (data-hora UTC do item)",
+          "detailLcl": "string (data-hora local do item)",
+          "lastUpdateUTC": "string (última atualização UTC do item)",
+          "lastUpdateLcl": "string (última atualização local do item)",
+          "busDt": "string (data do item)",
+          "wsNum": "number (estação de trabalho)",
+          "dspTtl": "number (valor total com impostos)",
+          "dspQty": "number (quantidade exibida)",
+          "aggTtl": "number (valor agregado)",
+          "aggQty": "number (quantidade agregada)",
+          "chkEmpId": "number (ID do funcionário)",
+          "chkEmpNum": "number",
+          "svcRndNum": "number (rodada de serviço)",
+          "seatNum": "number (número do assento)",
+
+          "menuItem": {
+            "miNum": "number (ID do item do menu)",
+            "modFlag": "boolean (item modificado?)",
+            "inclTax": "number (valor de imposto incluso)",
+            "activeTaxes": "string (IDs dos impostos ativos)",
+            "prcLvl": "number (nível de preço aplicado)"
+          }
+        }
+      ]
+    }
+  ]
+}
